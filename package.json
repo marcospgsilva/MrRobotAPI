@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "build": "tsc",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/app.ts' -e ts",
-    "start": "node src/app.ts"
+    "start": "node dist/app.js"
   },
   "repository": {
     "type": "git",
