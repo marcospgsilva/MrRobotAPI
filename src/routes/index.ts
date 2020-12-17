@@ -10,4 +10,8 @@ routes.post('/move', PositionController.setPosition)
 
 routes.get('/current-position', PositionController.currentPosition)
 
+routes.get('/', (req, res) => {
+  return res.send("Hi, I'm Mr.Robot")
+})
+
 export default routes
