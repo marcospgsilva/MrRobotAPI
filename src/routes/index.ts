@@ -4,7 +4,7 @@ import * as PositionController from '../controllers/PositionController'
 
 const routes = express.Router()
 
-routes.put('/to-initial', PositionController.toInitial)
+routes.post('/to-initial', PositionController.toInitial)
 
 routes.post('/move', PositionController.setPosition)
 
