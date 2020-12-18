@@ -5,7 +5,7 @@ afterAll(done => {
   done()
 })
 
-describe('Position Controller', () => {
+describe('Move Robot', () => {
   test('Should return 200 if all instructions is valid.', async () => {
     await request(app)
       .post('/move')
@@ -16,7 +16,7 @@ describe('Position Controller', () => {
   })
 })
 
-describe('Position Controller', () => {
+describe('Move Robot', () => {
   test('Should return 200 if all instructions is valid.', async () => {
     await request(app)
       .post('/move')
@@ -32,7 +32,7 @@ describe('Position Controller', () => {
   })
 })
 
-describe('Position Controller', () => {
+describe('Move Robot', () => {
   test('Should return 200 if all instructions is valid.', async () => {
     await request(app)
       .post('/move')
@@ -48,7 +48,7 @@ describe('Position Controller', () => {
   })
 })
 
-describe('Position Controller', () => {
+describe('Move Robot', () => {
   test('Should return 400 if the movement is invalid.', async () => {
     await request(app)
       .post('/move')
@@ -59,18 +59,16 @@ describe('Position Controller', () => {
   })
 })
 
-describe('Position Controller', () => {
+describe('Change Robot to initial position', () => {
   test('Should return 200 if the robot position is changed to the initial value', async () => {
     await request(app)
-      .put('/to-initial')
+      .post('/to-initial')
       .expect(200)
   })
 })
 
-describe('Position Controller', () => {
+describe('Move Robot', () => {
   test('Should return 400 if the final position is out of map', async () => {
-    await request(app)
-      .put('/to-initial')
     await request(app)
       .post('/move')
       .send({
@@ -80,24 +78,11 @@ describe('Position Controller', () => {
   })
 })
 
-describe('Position Controller', () => {
-  test('Should return 400 if the final position is out of map', async () => {
-    await request(app)
-      .put('/to-initial')
-    await request(app)
-      .post('/move')
-      .send({
-        move: ['GD', 'M']
-      })
-      .expect(400)
-  })
-})
-
-describe('Position Controller', () => {
-  describe('Position Controller', () => {
+describe('Move Robot', () => {
+  describe('Change Robot to initial position', () => {
     test('Should return 200 if the robot position is changed to the initial value', async () => {
       await request(app)
-        .put('/to-initial')
+        .post('/to-initial')
         .expect(200)
     })
   })
