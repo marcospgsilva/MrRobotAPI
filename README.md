@@ -1,4 +1,4 @@
-#  GoBarber API
+#  Mr.Robot API
 
 
 This is an API created with NodeJS to control a robot that is on Mars. For the user is possible to see the current position, send new movements, and set the robot to its initial position.
