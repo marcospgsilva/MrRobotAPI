@@ -18,6 +18,7 @@ export const currentPosition = (req: Request, res: Response) => {
 export const setPosition = (req: SetRobotMovementRequest, res: Response) => {
   const { move: commands } = req.body
 
+  if (!commands) return res.status(400).json({ erro: 'Formato inválido, verifique o corpo da sua requisição' })
   if (!validateCommands(commands)) return res.status(400).json({ erro: 'Um comando inválido foi detectado.' })
 
   const finalPosition = commands.map((action: Actions) => movement[action]())
